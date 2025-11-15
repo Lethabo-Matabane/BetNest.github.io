@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content="Book gaming sessions or CV assistance"/>
+    <title>Bookings - BetNest Cafe</title>
+    <link rel="stylesheet" href="../CSS/main.css"/>
+    <link rel="stylesheet" href="../CSS/Booking.css"/>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <img src="../../Logo/BETNEST.jpg" alt="logo" class="logo-video"/>
+            <div class="brand-text">
+                <h1 class="site-title">Bookings</h1>
+                <p class="tagline">Reserve a PC, console or CV help</p>
+                <p id="status-indicator" class="status">Checking opening hours…</p>
+            </div>
+        </div>
+
+    <nav id="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a>
+            </li><li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Announcements.html">Announcements</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    <div class="auth-controls">
+        <div class="auth-buttons">
+            <button class="btn btn-login" onclick="location.href='login.html'">Login</button>
+            <button class="btn btn-signup" onclick="location.href='signup.html'">Sign Up</button>
+        </div>
+    
+        <div class="access-controls">
+            <button id="themeToggle" class="control-btn">Dark</button>
+            <button id="contrastToggle" class="control-btn">High contrast</button>
+            <span class="zoom-controls"><button id="zoomOut" class="control-btn">A-</button>
+                <button id="zoomReset" class="control-btn">A</button>
+                <button id="zoomIn" class="control-btn">A+</button>
+            </span>
+        </div>
+    </div>
+</nav>
+
+    <form id="searchForm" class="search-bar">
+        <label class="sr-only" for="searchInput">Search</label>
+        <input id="searchInput" name="search" type="search" placeholder="Search bookings or services..." />
+        <button class="btn btn-search" type="submit">Search</button>
+    </form>
+</header>
+
+<main id="main" class="panel" role="main">
+    <h2>Book a Session</h2>
+
+    <form id="bookingForm" class="booking-form" novalidate>
+      <label for="fname">Full name</label>
+      <input id="fname" name="fullName" type="text" required/>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="example@gmail.com" required/>
+
+      <label for="session">Choose a service</label>
+      <select id="session" name="session" required>
+        <option value="">-- Select Service --</option>
+        <option value="console">Console Gaming Session</option>
+        <option value="pc">PC Gaming Session</option>
+        <option value="cv">CV assistance</option>
+      </select>
+
+      <label for="date">Session date</label>
+      <input id="date" name="date" type="date" required/>
+
+      <label for="time">Session time</label>
+      <input id="time" name="time" type="time" required/>
+
+      <button type="submit" class="btn">Submit Booking</button>
+    </form>
+</main>
+
+    <footer><p>&copy; BetNest Cafe 2025. All Rights Reserved</p></footer>
+
+    <script src="../JS/homepage.js" defer></script>
+    <script src="../JS/site.js" defer></script>
+    <script src="../JS/booking.js" defer></script>
+</body>
+</html>

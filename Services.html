@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="Services: PC & console gaming, internet packages, printing, CV assistance"/>
+  <title>Services - BetNest Cafe</title>
+
+  <!-- shared styles -->
+  <link rel="stylesheet" href="../CSS/main.css"/>
+  <!-- page specific -->
+  <link rel="stylesheet" href="../CSS/services.css"/>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="../../Logo/BETNEST.jpg" alt="BetNest logo" class="logo-video"/>
+      <div class="brand-text">
+        <h1 class="site-title">BETNEST CAFE</h1>
+        <p class="tagline">Gaming Services & Internet</p>
+        <p id="status-indicator" class="status" aria-live="polite">Checking opening hours…</p>
+      </div>
+    </div>
+
+    <nav id="navbar" role="navigation" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="Announcements.html">Announcements</a></li>
+        <li><a href="booking.html">Bookings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="auth-controls">
+        <div class="auth-buttons">
+          <button class="btn btn-login" type="button" onclick="location.href='login.html'">Login</button>
+          <button class="btn btn-signup" type="button" onclick="location.href='signup.html'">Sign Up</button>
+        </div>
+
+        <div class="access-controls">
+          <button id="themeToggle" class="control-btn" aria-pressed="false">Dark</button>
+          <button id="contrastToggle" class="control-btn" aria-pressed="false">High contrast</button>
+          <span class="zoom-controls">
+            <button id="zoomOut" class="control-btn" aria-label="Zoom out">A-</button>
+            <button id="zoomReset" class="control-btn" aria-label="Reset zoom">A</button>
+            <button id="zoomIn" class="control-btn" aria-label="Zoom in">A+</button>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <form id="searchForm" class="search-bar" role="search">
+      <label for="searchInput" class="sr-only">Search</label>
+      <input id="searchInput" name="search" type="search" placeholder="Filter services or search games..." />
+      <button type="submit" class="btn btn-search">Search</button>
+    </form>
+  </header>
+
+  <main id="main" class="panel" role="main" aria-labelledby="services-heading">
+    <h2 id="services-heading">Gaming & Internet Services</h2>
+
+    <div class="intro-block">
+      <p>We provide a range of services including high-performance PC rigs, PlayStation consoles, internet packages, printing and CV assistance. Members get discounts and priority booking.</p>
+    </div>
+
+    <!-- service accordions -->
+    <section class="service-accordion" aria-label="Service details">
+      <button class="accordion-head" aria-expanded="false">Internet access packages (hourly / daily / monthly)</button>
+      <div class="accordion-panel"><p>Choose hourly, daily or monthly internet packages. Membership includes discounts on data and longer sessions.</p></div>
+
+      <button class="accordion-head" aria-expanded="false">Gaming zone (PC & console)</button>
+      <div class="accordion-panel"><p>PC and PlayStation setups with hourly pricing and tournament options. Members have priority booking.</p></div>
+
+      <button class="accordion-head" aria-expanded="false">Printing & CV assistance</button>
+      <div class="accordion-panel"><p>We offer affordable printing and CV help — templates, editing and printing-ready copies.</p></div>
+    </section>
+
+    <section class="game-cards-section" aria-labelledby="games-heading">
+      <h3 id="games-heading">Popular Games (Play here)</h3>
+
+      
+      <div class="game-cards" role="list">
+
+        <figure class="game-card" role="listitem" tabindex="0" data-title="FIFA 24" data-img="../../Images/FIFA 23.jpg">
+          <img src="../../Images/FIFA 23.jpg" alt="FIFA 23 gameplay screenshot" />
+          <figcaption><h4>FIFA 23 (PlayStation 4 & 5)</h4></figcaption>
+        </figure>
+
+        <figure class="game-card" role="listitem" tabindex="0" data-title="NBA 2K20" data-img="../../Images/NBA.jpg">
+          <img src="../../Images/NBA.jpg" alt="NBA 2K gameplay" />
+          <figcaption><h4>NBA 2K20 (PC)</h4></figcaption>
+        </figure>
+
+        <figure class="game-card" role="listitem" tabindex="0" data-title="God of War: Ragnarok" data-img="../../Images/GOW.jpg">
+          <img src="../../Images/GOW.jpg" alt="God of War Ragnarok artwork" />
+          <figcaption><h4>God of War: Ragnarok (PlayStation 4 & PC)</h4></figcaption>
+        </figure>
+
+        <figure class="game-card" role="listitem" tabindex="0" data-title="Grand Theft Auto V" data-img="../../Images/GTA V.jpg">
+          <img src="../../Images/GTA V.jpg" alt="Grand Theft Auto V scene" />
+          <figcaption><h4>Grand Theft Auto V (PlayStation 4)</h4></figcaption>
+        </figure>
+
+        <figure class="game-card" role="listitem" tabindex="0" data-title="Counter-Strike 2" data-img="../../Images/Counter-Strike.jpg">
+          <img src="../../Images/Counter-Strike.jpg" alt="Counter-Strike 2 gameplay" />
+          <figcaption><h4>Counter-Strike 2 (PC)</h4></figcaption>
+        </figure>
+
+        <figure class="game-card" role="listitem" tabindex="0" data-title="Valorant" data-img="../../Images/Valorant.jpg">
+          <img src="../../Images/Valorant.jpg" alt="Valorant gameplay" />
+          <figcaption><h4>Valorant (PC)</h4></figcaption>
+        </figure>
+        
+        <figure class="game-card" role="listitem" tabindex="0" data-title="Minecraft" data-img="../../Images/Minecraft.jpg">
+          <img src="../../Images/Minecraft.jpg" alt="Minecraft (PC)" />
+          <figcaption><h4>Minecraft (PC)</h4></figcaption>
+        </figure>
+
+        <figure class="game-card" role="listitem" tabindex="0" data-title="Spider-Man" data-img="../../Images/Spider-man.jpg">
+          <img src="../../Images/Spider-man.jpg" alt="Spider-Man" />
+          <figcaption><h4>Spider-Man (PlayStation 5)</h4></figcaption>
+        </figure>
+
+        <figure class="game-card" role="listitem" tabindex="0" data-title="Mortal Kombat" data-img="../../Images/Mortal Kombat 11.jpg">
+          <img src="../../Images/Mortal Kombat 11.jpg" alt="MK11" />
+          <figcaption><h4>Mortal Kombat (PlayStation 4)</h4></figcaption>
+        </figure>
+
+        <figure class="game-card" role="listitem" tabindex="0" data-title="FIFA 24" data-img="../../Images/FIFA_24.jpg">
+          <img src="../../Images/FIFA 24.jpg" alt="FIFA 24" />
+          <figcaption><h4>FIFA 24 (PlayStation 5)</h4></figcaption>
+        </figure>        
+
+      </div>
+    </section>
+
+    <!-- Price calculator -->
+    <section style="margin-top:18px;">
+      <h3>Price Calculator</h3>
+      <form id="priceCalculator">
+        <label for="platform">Platform: </label>
+        <select id="platform" name="platform">
+          <option value="pc">PC (R20/hr)</option>
+          <option value="ps4">PlayStation 4 (R25/hr)</option>
+          <option value="ps5">PlayStation 5 (R35/hr)</option>
+        </select><br>
+
+        <label for="hours">Hours: </label>
+        <input id="hours" name="hours" type="number" min="1" max="8" value="1" /> <br>
+
+        <button type="submit" class="btn">Calculate</button>
+      </form>
+      <p id="calcResult" style="margin-top:8px;font-weight:700;"></p>
+    </section>
+
+    <!-- Hourly Prices -->
+    <section style="margin-top:18px;">
+      <h3>Hourly Prices</h3>
+      <table>
+        <thead>
+            <tr>
+                <th>Platform</th>
+                <th>Price / hr</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>PC</td>
+            <td>R20</td>
+        </tr>
+          <tr><td>PlayStation 4</td><td>R25</td></tr>
+          <tr><td>PlayStation 5</td><td>R35</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:8px;"><strong>Note:</strong> Non-members limited to 2 hours/day. Members allowed up to 3.5 hours/day.</p>
+    </section>
+
+    <!--Printing Services-->
+    <section style="margin-top: 18px;" aria-labelledby="printing-heading">
+        <h3 id="printing-heading">Printing Services</h3>
+        <p>We offer printing for A4 and A3 sizes. Prices below apply per page. 
+            <small>Regular customers can receive a negotiatable dicsount when buying in bult</small>
+        </p>
+
+        <table class="printing-table" aria-describedby="printing-note">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Black &amp; White (per page)</th>
+                    <th>Colour (per page)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A4 - Single-sided</td>
+                    <td>R2.00</td>
+                    <td>R6.00</td>
+                </tr>
+                <tr>
+                    <td>A4 - Double-sided</td>
+                    <td>R3.00</td>
+                    <td>R8.50.</td>
+                </tr>
+                <tr>
+                    <td>A3 - Single-sided</td>
+                    <td>R4.00</td>
+                    <td>R11.00</td>
+                </tr>
+                <tr>
+                    <td>A3 - Double-sided</td>
+                    <td>R6.50</td>
+                    <td>R15.00</td>
+                </tr>
+                <tr>
+                    <td>Scanning (per page)</td>
+                    <td colspan="2">R2.00</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p id="printing-note">
+            <small>Prices are estimated and may be adjusted based on supplier costs and paper quality.
+            Discounts apply at our checkout. VAT inclusive where applicable.</small>
+        </p>
+    </section>
+
+  </main>
+
+  <footer><p>&copy; BetNest Cafe 2025. All Rights Reserved</p></footer>
+
+  <!-- scripts: site-wide + this page -->
+  <script src="../JS/site.js" defer></script>
+  <script src="../JS/homepage.js" defer></script>
+  <script src="../JS/services.js" defer></script>
+</body>
+</html>
+
+

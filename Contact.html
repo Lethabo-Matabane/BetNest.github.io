@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content="Contact BetNest Cafe — address, phone and hours."/>
+    <title>Contact - BetNest Cafe</title>
+    <link rel="stylesheet" href="../CSS/main.css"/>
+    <link rel="stylesheet" href="../CSS/Contact.css"/>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <img src="../../Logo/BETNEST.jpg" alt="logo" class="logo-video"/>
+            <div class="brand-text"><h1 class="site-title">Contact Us</h1>
+                <p class="tagline">We would love to hear from you!</p>
+                <p id="status-indicator" class="status">Checking opening hours…</p>
+            </div>
+        </div>
+
+    <nav id="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Announcements.html">Announcements</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    <div class="auth-controls">
+        <div class="auth-buttons">
+            <button class="btn btn-login" onclick="location.href='login.html'">Login</button>
+            <button class="btn btn-signup" onclick="location.href='signup.html'">Sign Up</button>
+        </div>
+        
+        <div class="access-controls">
+            <button id="themeToggle" class="control-btn">Dark</button>
+            <button id="contrastToggle" class="control-btn">High contrast</button>
+            <span class="zoom-controls">
+                <button id="zoomOut" class="control-btn">A-</button>
+                <button id="zoomReset" class="control-btn">A</button>
+                <button id="zoomIn" class="control-btn">A+</button>
+            </span>
+        </div>
+    </div>
+</nav>
+
+    <form id="searchForm" class="search-bar">
+        <label for="searchInput" class="sr-only">Search</label>
+        <input id="searchInput" name="search" type="search" placeholder="Search contact or help..." />
+        <button class="btn btn-search" type="submit">Search</button>
+    </form>
+  
+</header>
+
+    <main id="main" class="panel" role="main">
+        <section class="contact-info">
+            <h2>Contact Details</h2>
+                <p><strong>Address:</strong> 3050, Block B, Mabopane, 0190</p>
+                <p><strong>Phone:</strong> +27 67 738 6499</p>
+                <p><strong>Email:</strong> lethabomatabane396@gmail.com</p>
+                <p><strong>Operating Hours:</strong></p>
+                <ul>
+                    <li>Mon - Fri: 09:00 - 18:00</li>
+                    <li>Sat: 10:00 - 18:00</li>
+                    <li>Sun: 10:00 - 16:00</li>
+                </ul>
+            <p id="business-status" aria-live="polite" style="font-weight:700;margin-top:8px;"></p>
+        </section>
+
+        <section class="contact-form" style="margin-top:18px;">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm" novalidate>
+                <label for="contact-name">Full name</label><input id="contact-name" name="fullName" type="text" required/>
+                <label for="contact-email">Email</label><input id="contact-email" name="email" type="email" required/>
+                <label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="6" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div id="contact-auto-response" aria-live="polite" style="margin-top:12px;"></div>
+        </section>
+    </main>
+
+    <footer><p>&copy; BetNest Cafe 2025. All Rights Reserved</p></footer>
+
+    <script src="../JS/site.js" defer></script>
+    <script src="../JS/homepage.js" defer></script>
+    <script src="../JS/contact.js" defer></script>
+</body>
+</html>

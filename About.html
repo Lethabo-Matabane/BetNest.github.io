@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="About BetNest Cafe — history, mission, vision, values and target audience." />
+  <title>About - BetNest Cafe</title>
+
+
+  <link rel="stylesheet" href="../CSS/main.css" />
+  <link rel="stylesheet" href="../CSS/about.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner" aria-label="Site header">
+    <div class="brand">
+      <img src="../../Logo/BETNEST.jpg" alt="BetNest Cafe logo" class="logo-video" width="110" />
+      <div class="brand-text">
+        <h1 class="site-title">BETNEST CAFE</h1>
+        <p class="tagline">The best destination for leisure and productivity</p>
+        <p id="status-indicator" class="status" aria-live="polite">Checking opening hours…</p>
+      </div>
+    </div>
+
+    <nav id="navbar" role="navigation" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Announcements.html">Announcements</a></li>
+        <li><a href="booking.html">Bookings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="auth-controls">
+        <div class="auth-buttons">
+          <button class="btn btn-login" type="button" onclick="location.href='login.html'">Login</button>
+          <button class="btn btn-signup" type="button" onclick="location.href='signup.html'">Sign Up</button>
+        </div>
+
+        <div class="access-controls">
+          <button id="themeToggle" class="control-btn" aria-pressed="false">Dark</button>
+          <button id="contrastToggle" class="control-btn" aria-pressed="false">High contrast</button>
+          <span class="zoom-controls">
+            <button id="zoomOut" class="control-btn" aria-label="Zoom out">A-</button>
+            <button id="zoomReset" class="control-btn" aria-label="Reset zoom">A</button>
+            <button id="zoomIn" class="control-btn" aria-label="Zoom in">A+</button>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <form id="searchForm" class="search-bar" role="search" aria-label="Site search">
+      <label for="searchInput" class="sr-only">Search the site</label>
+      <input id="searchInput" name="search" type="search" placeholder="Search the site..." />
+      <button class="btn btn-search" type="submit">Search</button>
+    </form>
+  </header>
+
+  <main id="main" class="panel" role="main">
+    <h2>About BetNest Cafe</h2>
+
+    <!-- History -->
+    <section aria-labelledby="history-heading" class="history">
+      <h3 id="history-heading">Our Story</h3>
+      <p><strong>Founded:</strong> 10 March 2020 — <strong>Location:</strong> Mabopane. BetNest Cafe began as a small neighbourhood internet cafe and quickly evolved into a mixed-use destination combining study space, high-speed internet, and a dedicated gaming zone. Over the years we’ve hosted local tournaments, helped students with CVs and job applications, and become a reliable hangout for gamers and remote workers alike.</p>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision" aria-labelledby="mission-heading">
+      <div class="mv-grid">
+        <div>
+          <h3 id="mission-heading">Mission</h3>
+          <p>To provide exceptional gaming and professional experiences within a safe and welcoming environment that supports learning, competition and community connection.</p>
+        </div>
+        <div>
+          <h3 id="vision-heading">Vision</h3>
+          <p>To grow BetNest into the leading local hub for gamers, students and freelancers — known for fast internet, well-maintained equipment, and memorable community events.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target audience -->
+    <section aria-labelledby="audience-heading" class="audience">
+      <h3 id="audience-heading">Target Audience</h3>
+      <ul>
+        <li>Gamers aged 11–30 (casual and competitive)</li>
+        <li>Adults 18+ who use the cafe for tournaments and social gaming</li>
+        <li>Students and job-seekers needing internet, printing and CV help</li>
+        <li>Parents looking for a safe, supervised place for their children</li>
+      </ul>
+    </section>
+
+    <!-- Services summary -->
+    <section aria-labelledby="services-summary" class="services-summary">
+      <h3 id="services-summary">What We Do</h3>
+      <p>BetNest provides:</p>
+      <ul>
+        <li>High-speed internet (hourly / daily / monthly packages)</li>
+        <li>PC rigs and PlayStation consoles for hourly use and tournaments</li>
+        <li>Printing, scanning and basic computer help</li>
+        <li>CV preparation assistance and career resources</li>
+        <li>Regular community tournaments with prizes and member discounts</li>
+      </ul>
+    </section>
+
+    <!-- Our values (with flip-cards) -->
+    <section aria-labelledby="values-heading" class="values">
+      <h3 id="values-heading">Our Values</h3>
+
+      <div class="flip-grid" role="list">
+
+        <div class="flip-card" role="listitem">
+          <button class="flip-btn" aria-pressed="false" aria-label="Community — click to flip" tabindex="0">
+            <div class="flip-inner" aria-hidden="false">
+              <div class="flip-front">
+                <div class="icon"></div>
+                <h4>Community</h4>
+                <p class="small">Events, clubs and safe spaces</p>
+              </div>
+              <div class="flip-back">
+                <h4>Community</h4>
+                <p>We host regular tournaments and free workshops so players and learners can meet, share skills and grow together. Example: monthly FIFA community nights and student study blocks.</p>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="flip-card" role="listitem">
+          <button class="flip-btn" aria-pressed="false" aria-label="Reliability — click to flip" tabindex="0">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <div class="icon"></div>
+                <h4>Reliability</h4>
+                <p class="small">Fast internet and maintained hardware</p>
+              </div>
+              <div class="flip-back">
+                <h4>Reliability</h4>
+                <p>We maintain equipment, run routine checks and monitor network performance so customers can rely on consistent speed and uptime. Example: weekly hardware checks and 24/7 monitoring of key systems.</p>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="flip-card" role="listitem">
+          <button class="flip-btn" aria-pressed="false" aria-label="Excellence — click to flip" tabindex="0">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <div class="icon"></div>
+                <h4>Excellence</h4>
+                <p class="small">Friendly staff and great service</p>
+              </div>
+              <div class="flip-back">
+                <h4>Excellence</h4>
+                <p>We train our staff on customer service, game setups and basic CV help so every visit feels helpful and professional. Example: trained assistants for CV clinics and tournament referees.</p>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- timeline milestones-->
+    <section aria-labelledby="timeline-heading" class="timeline">
+      <h3 id="timeline-heading">Milestones</h3>
+      <ol>
+        <li><strong>2020</strong> - BetNest opens in Mabopane (small twelve-seat cafe).</li>
+        <li><strong>2022</strong> - First local FIFA tournament.</li>
+        <li><strong>2024</strong> - Introduction to Membership program.</li>
+        <li><strong>2025</strong> - Expanded to a larger gaming zone and added CV services.</li>
+        <li><strong>2028</strong> - First online gaming tournaments, with nation-wide auience/contestants.</li>
+      </ol>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <p>Want to partner with BetNest (sponsorships, events or community programmes)? <a href="contact.html">Contact us</a> — we’d love to hear your idea.</p>
+    </section>
+  </main>
+
+  <footer role="contentinfo"><p>&copy; BetNest Cafe 2025. All Rights Reserved</p></footer>
+
+  <!-- scripts -->
+  <script src="../JS/site.js" defer></script>
+  <script src="../JS/homepage.js"defer></script>
+  <script src="../JS/about.js" defer></script>
+</body>
+</html>
+

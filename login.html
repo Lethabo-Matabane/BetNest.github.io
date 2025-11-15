@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content="Login to BetNest Cafe account"/>
+    <title>Login - BetNest Cafe</title>
+    <link rel="stylesheet" href="../CSS/main.css"/>
+    <link rel="stylesheet" href="../CSS/login&signup.css"/>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <img src="../../Logo/BETNEST.jpg" alt="logo" class="logo-video"/>
+            <div class="brand-text"><h1 class="site-title">BETNEST CAFE</h1>
+                <p class="tagline">Login to your account</p>
+            </div>
+        </div>
+
+    <nav id="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signup.html">Sign Up</a>
+            </li>
+        </ul>
+    
+        <div class="access-controls">
+            <button id="themeToggle" class="control-btn">Dark</button>
+        </div>
+    </nav>
+</header>
+
+<main id="main" class="panel" role="main">
+    <h2>Login</h2>
+        <form id="loginForm" novalidate>
+            <label for="login-email">Email: </label>
+            <input id="login-email" name="email" type="email" required/><br>
+            <label for="login-password">Password: </label>
+            <input id="login-password" name="password" type="password" required/><br>
+            <button type="submit" class="btn">Login</button><br>
+        </form>
+        <p style="margin-top:12px;">Don't have an account? 
+            <a href="signup.html">Sign up here</a>
+        </p>
+  </main>
+
+  <footer><p>&copy; BetNest Cafe 2025. All Rights Reserved</p></footer>
+
+  <script src="../JS/site.js" defer></script>
+  <script src="../JS/login&signup.js" defer></script>
+</body>
+</html>

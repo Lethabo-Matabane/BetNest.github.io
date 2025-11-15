@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content="Create an account at BetNest Cafe"/>
+    <title>Sign Up - BetNest Cafe</title>
+    <link rel="stylesheet" href="../CSS/main.css"/>
+    <link rel="stylesheet" href="../CSS/login&signup.css"/>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="brand">
+            <img src="../../Logo/BETNEST.jpg" alt="logo" class="logo-video"/>
+            <div class="brand-text">
+                <h1 class="site-title">BETNEST CAFE</h1>
+                <p class="tagline">Create a new account</p>
+            </div>
+        </div>
+
+        <nav id="navbar"><ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <div class="access-controls">
+            <button id="themeToggle" class="control-btn">Dark</button>
+        </div>
+    </nav>
+    </header>
+
+    <main id="main" class="panel" role="main">
+        <h2>Sign Up</h2>
+        <form id="signupForm" novalidate>
+            <label for="fullname">Full name: </label>
+            <input id="fullname" name="fullname" type="text" required/><br>
+            <label for="signup-email">Email: </label>
+            <input id="signup-email" name="email" type="email" required/><br>
+            <label for="signup-password">Password: </label>
+            <input id="signup-password" name="password" type="password" required/><br>
+            <label for="confirm-password">Confirm password: </label>
+            <input id="confirm-password" name="confirm" type="password" required/><br>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p style="margin-top:12px;">Already have an account? 
+            <a href="login.html">Login here</a>
+        </p>
+    </main>
+
+    <footer><p>&copy; BetNest Cafe 2025. All Rights Reserved</p></footer>
+
+    <script src="../JS/site.js" defer></script>
+    <script src="../JS/login&signup.js" defer></script>
+</body>
+</html>
+

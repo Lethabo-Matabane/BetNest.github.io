@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BetNest Cafe | Announcements & Tournaments</title>
+
+  <link rel="stylesheet" href="../CSS/main.css">
+  <link rel="stylesheet" href="../CSS/Announcement.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand" style="align-items:center;gap:12px;max-width:1100px;margin:0 auto;padding:12px">
+      <img src="../../Logo/BETNEST.jpg" alt="BetNest Cafe logo" class="logo-video" width="84" />
+      <div class="brand-text">
+        <h1 class="site-title" style="margin:0">Announcements & Events</h1>
+        <p class="tagline" style="margin:4px 0 0">News, tournament updates and community posts</p>
+      </div>
+    </div>
+
+    <nav id="navbar" role="navigation" aria-label="Primary" style="max-width:1100px;margin:0 auto;padding:6px">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a>
+        </li><li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Announcements.html">Announcements</a></li>
+        <li><a href="booking.html">Bookings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="panel" style="max-width:1100px;margin:18px auto;padding:16px">
+    <!-- Controls: search + view toggles + admin toggle -->
+    <section class="filter-bar" aria-label="Event controls" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+      <input id="eventFilter" type="search" placeholder="Search announcements & events..." aria-label="Search events and announcements" />
+      <div class="view-controls" role="tablist" aria-label="Choose view">
+        <button id="viewEvents" class="btn small view-toggle" role="tab" aria-selected="true">Events</button>
+        <button id="viewAnnouncements" class="btn small view-toggle" role="tab" aria-selected="false">Announcements</button>
+        <button id="viewBoth" class="btn small view-toggle" role="tab" aria-selected="false">Both</button>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button id="adminToggle" class="btn small">+ Add</button>
+        <span id="eventCounts" style="color:var(--muted);font-weight:700;margin-left:8px"></span>
+      </div>
+    </section>
+
+    <!-- ANNOUNCEMENTS SECTION -->
+    <section id="announcementsSection" aria-label="Announcements" style="margin-top:12px">
+      <h2>Latest Announcements</h2>
+      <div id="announcementsGrid" class="announcements-grid" aria-live="polite">
+        <!-- sample announcement -->
+        <article class="announce-card" id="a1" aria-labelledby="a1-title" data-datetime="2025-08-01T10:00:00+02:00">
+          <div class="announce-content">
+            <h3 id="a1-title">New Cafe Hours from September</h3>
+            <p class="announce-meta"><time datetime="2025-08-01T10:00:00+02:00">1 Aug 2025</time></p>
+            <p>Starting 1 Sept we will open earlier on weekdays at 08:00 to accommodate students. Weekday closing remains 18:00.</p>
+          </div>
+        </article>
+        <!-- more announcements can be added -->
+      </div>
+    </section>
+
+    <hr style="margin:18px 0;border-color:rgba(0,0,0,0.06)">
+
+    <!-- EVENTS SECTION -->
+    <section id="eventsSection" aria-label="Events" style="margin-top:12px">
+      <h2>Upcoming Events & Tournaments</h2>
+      <div id="eventsGrid" class="events-grid" aria-live="polite" aria-label="Events list">
+        <!-- Example event card -->
+        <article class="event-card" data-datetime="2025-11-15T14:00:00+02:00" id="event1" aria-labelledby="event1-title">
+          <img src="../../Images/fifa.jpg" alt="FIFA 24 tournament poster">
+          <div class="event-info">
+            <h3 id="event1-title">FIFA 24 Community Cup</h3>
+            <p class="ev-meta"><time datetime="2025-11-15T14:00:00+02:00">Sat, 15 Nov 2025 — 14:00–17:00</time></p>
+            <p class="description">Join our FIFA 24 tournament! Entry R50, prizes for top 3 players. 16 spots available.</p>
+            <div class="ev-actions">
+              <button class="btn share-btn" data-url="https://example.com/announcements.html#event1">Share</button>
+              <a href="#" class="btn outline register-btn" data-event="event1">Register</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Admin event/announcement creation (local-only demo) -->
+    <section id="adminSection" class="admin-section hidden" aria-hidden="true">
+      <h2>Add New Item</h2>
+      <form id="adminForm" aria-label="Add new event or announcement">
+        <label for="itemType">Type</label>
+        <select id="itemType" required>
+          <option value="event">Event (tournament)</option>
+          <option value="announcement">Announcement (news/update)</option>
+        </select>
+
+        <label for="itemTitle">Title</label>
+        <input id="itemTitle" type="text" placeholder="Title" required />
+
+        <label for="itemDescription">Description</label>
+        <textarea id="itemDescription" placeholder="Short description" rows="3" required></textarea>
+
+        <label for="itemStart">Date & time (Event start or announcement date)</label>
+        <input id="itemStart" type="datetime-local" required />
+
+        <label for="itemEnd">End date & time (optional for events)</label>
+        <input id="itemEnd" type="datetime-local" />
+
+        <label for="itemImage">Image URL / path (optional)</label>
+        <input id="itemImage" type="text" placeholder="../../Images/your-image.jpg" />
+
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button type="submit" class="btn">Add</button>
+          <button type="button" id="adminCancel" class="btn outline">Cancel</button>
+        </div>
+      </form>
+      <p style="color:var(--muted);margin-top:8px">Note: This adds items client-side only (demo). Use a backend or Firebase to persist them.</p>
+    </section>
+  </main>
+
+  <footer style="text-align:center;padding:14px;background:transparent;color:var(--muted)">
+    <p>&copy; BetNest Cafe 2025. All Rights Reserved</p>
+  </footer>
+
+  <!-- JSON-LD sample for SEO (keeps demonstrating structured data) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SportsEvent",
+        "name": "FIFA 24 Community Cup",
+        "startDate": "2025-11-15T14:00:00+02:00",
+        "endDate": "2025-11-15T17:00:00+02:00",
+        "location": {"@type":"Place","name":"BetNest Cafe","address":"Mabopane, South Africa"},
+        "image": "../../Images/fifa.jpg",
+        "description": "Join our FIFA 24 tournament! Entry R50."
+      },
+      {
+        "@type": "Announcement",
+        "name": "New Cafe Hours from September",
+        "datePosted": "2025-08-01T10:00:00+02:00",
+        "description": "Starting 1 Sept we will open earlier on weekdays at 08:00 to accommodate students."
+      }
+    ]
+  }
+  </script>
+  <script src="../JS/site.js" defer></script>
+  <script src="../JS/announcements.js" defer></script>
+</body>
+</html>
