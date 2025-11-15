@@ -1,0 +1,7 @@
+/* auth.css - login & signup forms */
+main.panel{ max-width:420px; margin:28px auto; padding:20px }
+.detail-form label{ display:block; margin-top:10px; font-weight:700 }
+.detail-form input{ width:100%; padding:10px; margin-top:6px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); background:var(--panel); color:var(--text) }
+.detail-form button{ margin-top:12px; background:var(--accent-blue); color:#fff; width:100%; padding:10px; border-radius:8px }
+.detail-form p{ margin-top:10px; color:var(--muted); text-align:center }
+.form-error{ color:var(--accent-red); font-weight:700; margin-top:8px }

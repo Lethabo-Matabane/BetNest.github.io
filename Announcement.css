@@ -1,0 +1,69 @@
+/* announcements.css - events + announcements layout and admin */
+
+/* GENERAL GRID STYLES */
+.announcements-grid, .events-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+  margin-top:12px;
+}
+
+/* ANNOUNCEMENT CARD */
+.announce-card{
+  background:var(--panel);
+  padding:12px;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(0,0,0,0.04);
+}
+.announce-content h3{ margin:0; color:var(--accent-blue) }
+.announce-meta{ color:var(--muted); font-size:.95rem; margin:6px 0 }
+.announce-card p{ margin:6px 0; color:var(--text) }
+
+/* EVENT CARD */
+.event-card{
+  background:var(--panel);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease, opacity .18s ease;
+  display:flex;
+  flex-direction:column;
+  min-height:260px;
+  border:1px solid rgba(0,0,0,0.04);
+}
+.event-card:hover{ transform:translateY(-8px); box-shadow:0 20px 50px rgba(0,0,0,0.12) }
+.event-card img{ width:100%; height:160px; object-fit:cover; display:block; transition:transform .24s }
+.event-card:hover img{ transform:scale(1.03) }
+.event-info{ padding:12px; display:flex; flex-direction:column; gap:8px; flex:1 }
+.event-info h3{ margin:0;color:var(--accent-blue); font-size:1.05rem }
+.ev-meta{ color:var(--muted); font-size:.95rem }
+.description{ color:var(--text); margin:0; flex:1 }
+.ev-actions{ display:flex; gap:8px; margin-top:8px }
+
+/* BUTTONS & TOGGLES */
+.btn{ border:none; padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:700; background:var(--accent-blue); color:#000 }
+.btn.outline{ background:transparent; border:1px solid var(--accent-blue); color:var(--accent-blue) }
+.btn.small{ padding:6px 8px; font-size:.9rem }
+
+.view-toggle[aria-selected="true"]{ background:var(--accent-lime); color:#000; box-shadow:0 6px 18px rgba(0,0,0,0.08) }
+.view-toggle{ background:transparent; border:1px solid rgba(0,0,0,0.06); color:var(--accent-blue); padding:8px 10px; border-radius:8px }
+
+/* ADMIN SECTION */
+.admin-section{ margin-top:18px; background:var(--panel); padding:14px; border-radius:10px; border:1px solid rgba(0,0,0,0.04) }
+.admin-section.hidden{ display:none }
+.admin-section label{ display:block; margin-top:8px; font-weight:700; color:var(--muted) }
+.admin-section input, .admin-section textarea, .admin-section select{
+  padding:10px; border-radius:6px; border:1px solid rgba(0,0,0,0.06); width:100%; background:var(--glass)
+}
+
+/* PAST EVENTS style */
+.event-card.past{ opacity:.55; filter:grayscale(.18) }
+.announce-card.past{ opacity:.7; filter:grayscale(.06) }
+
+/* small screens */
+@media (max-width:640px){
+  .event-card img{ height:120px }
+  .announce-card{ padding:10px }
+  .filter-bar{ flex-direction:column; gap:8px }
+}

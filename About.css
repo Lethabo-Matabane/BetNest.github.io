@@ -1,0 +1,86 @@
+/* about.css - page-specific styles for About page (flip cards + layout tweaks) */
+
+main.panel { padding: 26px; max-width: 1100px; margin: 26px auto; }
+
+/* sections spacing */
+.history, .mission-vision, .audience, .services-summary, .values, .timeline, .cta {
+  margin-top: 14px;
+  color: var(--text);
+}
+.mission-vision .mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.mission-vision p { margin: 6px 0; color: var(--muted); }
+
+/* audience list */
+.audience ul, .services-summary ul {
+  margin-left: 18px;
+  list-style: disc;
+  color: var(--text);
+  margin-top: 8px;
+}
+
+/* timeline */
+.timeline ol { margin-left: 18px; color: var(--muted); }
+
+/* Values flip cards grid */
+.flip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+/* Each card uses a button so it's keyboard-accessible */
+.flip-card { perspective: 1000px; }
+.flip-btn {
+  display:block;
+  width:100%;
+  height:100%;
+  border: none;
+  background: transparent;
+  padding:0;
+  text-align:left;
+  cursor:pointer;
+  border-radius: 12px;
+  overflow: visible;
+}
+.flip-inner {
+  position: relative;
+  transition: transform 0.65s;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+  min-height: 180px;
+  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, var(--panel), rgba(0,0,0,0.01));
+}
+.flip-btn[aria-pressed="true"] .flip-inner { transform: rotateY(180deg); }
+
+/* front & back faces */
+.flip-front, .flip-back {
+  position: absolute;
+  inset: 0;
+  padding: 18px;
+  backface-visibility: hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:8px;
+}
+.flip-front { color: var(--text); }
+.flip-back { transform: rotateY(180deg); color: var(--muted); background: var(--panel); }
+
+/* icon + headings */
+.icon { font-size: 34px; }
+.flip-front h4, .flip-back h4 { margin: 0; color: var(--accent-blue); font-size:1.05rem }
+.small { color: var(--muted); font-size: .95rem }
+
+/* focus visible for keyboard users (site.js toggles .user-is-tabbing) */
+.user-is-tabbing .flip-btn:focus { outline: 3px solid var(--focus); outline-offset:6px; border-radius:8px; }
+
+/* responsive */
+@media (max-width:720px) {
+  .mission-vision .mv-grid { grid-template-columns: 1fr; }
+}

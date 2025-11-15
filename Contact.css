@@ -1,0 +1,10 @@
+/* contact.css - contact form + business status */
+main.panel { padding:20px; max-width:900px; margin:20px auto; }
+.contact-info p, .contact-info ul { margin-top:6px; color: var(--text); }
+.contact-form input, .contact-form textarea {
+  width:100%; padding:10px; margin-top:6px; border-radius:8px; border:1px solid rgba(0,0,0,0.06);
+  background: var(--panel);
+  color: var(--text);
+}
+#contact-auto-response { color: var(--accent-blue); font-weight:700; margin-top:10px; }
+#business-status { font-weight:800; color: var(--accent-lime); }

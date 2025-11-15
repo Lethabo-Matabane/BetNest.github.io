@@ -1,0 +1,33 @@
+/* Index.css - homepage-specific visuals (relies on variables in main.css) */
+
+.hero{ text-align:center; padding:36px 18px; max-width:1100px; margin:8px auto }
+.hero h2{ font-size:2rem; color:var(--accent-blue); margin:0 0 8px }
+.hero p{ margin:0 0 12px; color:var(--text); opacity:.95; max-width:820px; margin-left:auto;margin-right:auto }
+.scroll-link{ display:inline-block;background:linear-gradient(90deg,var(--accent-red),var(--accent-blue));color:#fff;padding:10px 18px;border-radius:28px;text-decoration:none;font-weight:800;box-shadow:0 6px 20px rgba(0,0,0,0.18) }
+.scroll-link:hover{ transform:translateY(-3px) }
+
+/* services grid */
+.services{ padding:18px 12px; max-width:1100px; margin:6px auto }
+.service-list{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px }
+.service-item{ background:var(--panel); border-radius:12px; padding:18px; text-align:center; transition:transform .18s ease, box-shadow .18s ease; border:1px solid rgba(0,0,0,0.04) }
+.service-item h3{ color:var(--accent-lime); margin-top:0 }
+.service-item p{ color:var(--text); opacity:.9 }
+.service-item:hover{ transform:translateY(-6px); box-shadow:0 14px 40px rgba(0,0,0,0.06) }
+
+/* overview images */
+.overview{ padding:18px 12px; max-width:1100px; margin:12px auto 36px }
+.image-row{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:12px }
+.image-row figure{ margin:0; width:calc(50% - 12px); max-width:320px }
+.image-row img{ width:100%; height:auto; border-radius:8px; box-shadow:0 8px 30px rgba(0,0,0,0.12) }
+
+/* live row */
+.live-row{ display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:18px auto; padding:0 12px }
+.greeting{ margin:0; font-weight:700; color:var(--accent-lime) }
+.clock{ margin:0; color:var(--muted); font-size:.95rem }
+
+/* small form inputs used across homepage components */
+input[type="text"], input[type="search"], input[type="email"], select, textarea{ font-family:inherit; }
+
+/* accessibility: make focus visible when keyboard used - site.js toggles class user-is-tabbing on body */
+
+
